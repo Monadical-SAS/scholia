@@ -143,7 +143,9 @@
         {% endblock %}
     </script>
     <script>
-        ( function ( CONFIG ) {
+        var j = jQuery.noConflict();
+
+        ;( function ( CONFIG, $) {
         'use strict';
         $.when(
             $.ready,
@@ -284,6 +286,7 @@
             } );
 
         } );
-    }( CONFIG ) );
+    })( CONFIG, j );
+    
     </script>
 {% endblock %}
